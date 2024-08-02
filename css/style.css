@@ -1,0 +1,64 @@
+/*CSS RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Utils*/
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+/*Generics*/
+main{
+    background-color: goldenrod;
+}
+
+h1{
+    font-size: 4rem ;
+    text-align: center;
+    color: white;
+
+    margin-bottom: 2rem;
+}
+
+ul{
+    list-style-type: none;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+li{
+    flex-basis: 10%;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*li backgrounds*/
+
+.bg-number{
+    background-color: aqua;
+}
+
+.bg-fizz{
+    background-color: darkgreen;
+}
+
+.bg-buzz{
+    background-color: blueviolet;
+}
+
+.bg-fizz-buzz{
+    background-color: red;
+}

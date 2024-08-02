@@ -21,24 +21,29 @@ const resultElement = document.getElementById('fizz-buzz');
 const multipleOf3 = 'Fizz';
 const multipleOf5 = 'Buzz';
 
-let list = '<ul>';
+let list = '';
 
 for(i=1; i<=100; i++){
-    let n = '';
+    const li = document.createElement('li');
 
     if(i % 3 === 0){
-        n += multipleOf3;
+        li.append(multipleOf3);
+        if(i % 5 === 0){
+            li.append(multipleOf5);
+            li.classList.add('bg-fizz-buzz');
+        }
+        else{
+            li.classList.add('bg-fizz');
+        }
     }
-    if(i % 5 === 0){
-        n += multipleOf5;
+    else if(i % 5 === 0){
+        li.append(multipleOf5);
+        li.classList.add('bg-buzz');
     }
-    if(!n){
-        n = i;
+    else{
+        li.append(i);
+        li.classList.add('bg-number');
     }
 
-    list += '<li>' + n + '</li>';
+    resultElement.appendChild(li);
 }
-
-list += '</ul>'
-
-resultElement.innerHTML = list;

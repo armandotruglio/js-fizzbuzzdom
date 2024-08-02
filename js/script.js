@@ -41,4 +41,4 @@ for(i=1; i<=100; i++){
 
 list += '</ul>'
 
-resultElement.innerHTML = content;
+resultElement.innerHTML = list;
